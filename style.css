@@ -3,6 +3,7 @@
 #modify-music {
 	background: #FFB4B0;
 	border: 2px solid black;
+	width: 100%;
 }
 
 #modify-music >ul {
@@ -45,13 +46,14 @@
 /*Button*/
 
 #button {
+	clear: both;
 	text-align: center;
 }
 /*Song display Div*/
 #song-display {
 	background: #FEFAC0;
 	float: right;
-	width: 84%;
+	width: 80%;
 	border: 2px solid black;
 	margin-top: 10px;
 }
