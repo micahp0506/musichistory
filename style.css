@@ -16,22 +16,56 @@
 	display: inline-block;
 	margin-top: 10px;
 	border: 2px solid black;
+	height: 409px;
 }
 
-#music-adder >input {
+#music-adder>input {
 	display: block;
 }
 
-#options1 {
-	display: block;
+#music1 >#options1 >li{
+	list-style-type: none;
+	margin-left: -40px;
 }
 
-#options2 {
-	display: block;
-	vertical-align: middle;
+#music2 >#options2 >li{
+	list-style-type: none;
+
 }
+
+#music1 {
+	float: left;
+}
+#music2 {
+	float: right;
+}
+
+/*#options1 >input{
+	display: inline-block;
+
+}*/
+
+/*#options2 >input{
+	display: inline-block;
+}*/
 
 #button {
 	text-align: center;
-}
+	}
 	
+#song-display {
+	background: #FEFAC0;
+	float: right;
+	width: 84%;
+	border: 2px solid black;
+	margin-top: 10px;
+}
+
+#song-display >ul>li {
+	display: inline-block;
+}
+
+.song-name {
+	color: #785616;
+	padding-left: 40px;
+}

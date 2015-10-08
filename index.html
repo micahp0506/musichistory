@@ -15,8 +15,9 @@
       <li><a href="#">Add Music</a></li>
       <li>|</li>
       <li><a href="#">Profile</a></li>
-    </ul>
+    </ul>   
   </div>
+</header> 
   <div id="music-adder">
     <label class="song-length">Song length:</label>
     <input type ="range" name="song-length" step="2" min="20" max="30">
@@ -29,15 +30,19 @@
       <option value="options">Options</option>
     </select>
     <p>Genre:</p>
-    <div id="options1">
-      <input type="checkbox" name="genre" value="rock"> Rock
-      <input type="checkbox" name="genre" value="pop"> Pop
-      <input type="checkbox" name="genre" value="blues"> Blues
-    </div>
-    <div id="options2">
-      <input type="checkbox" name="genre" value="classical"> Classical  
-      <input type="checkbox" name="genre" value="jazz"> Jazz
-      <input type="checkbox" name="genre" value="hip-hop"> Hip hop
+    <div id="music1">
+      <ul id="options1">
+        <li><input type="checkbox" name="genre" value="rock"> Rock</li>
+        <li><input type="checkbox" name="genre" value="pop"> Pop</li>
+        <li><input type="checkbox" name="genre" value="blues"> Blues</li>
+      </ul>
+     </div>
+    <div id="music2">  
+      <ul id="options2">
+        <li><input type="checkbox" name="genre" value="classical"> Classical</li>
+        <li><input type="checkbox" name="genre" value="jazz"> Jazz</li>
+        <li><input type="checkbox" name="genre" value="hip-hop"> Hip hop</li>
+      </ul>
     </div>
     <div id="button">
       <input type="submit" value="Filter"></input>
@@ -78,6 +83,6 @@
     </ul>  
 
   </div>
-</header>
+
 </body>
 </html>
