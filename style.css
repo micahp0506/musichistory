@@ -1,6 +1,6 @@
 #modify-music {
 	background: #FFB4B0;
-	border: 1px solid black;
+	border: 2px solid black;
 }
 
 #modify-music >ul {
@@ -14,14 +14,24 @@
 #music-adder {
 	background: #4DD7FA;
 	display: inline-block;
+	margin-top: 10px;
+	border: 2px solid black;
 }
 
 #music-adder >input {
 	display: block;
 }
 
-#additional-options {
-	display: inline-block;
-	flaot: right;
+#options1 {
+	display: block;
+}
+
+#options2 {
+	display: block;
+	vertical-align: middle;
+}
+
+#button {
+	text-align: center;
 }
 	
