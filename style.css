@@ -1,3 +1,5 @@
+/*Navigation*/
+
 #modify-music {
 	background: #FFB4B0;
 	border: 2px solid black;
@@ -10,7 +12,7 @@
 #modify-music >ul >li {
 	display: inline;
 }
-
+/*Music adder div*/
 #music-adder {
 	background: #4DD7FA;
 	display: inline-block;
@@ -40,19 +42,12 @@
 	float: right;
 }
 
-/*#options1 >input{
-	display: inline-block;
-
-}*/
-
-/*#options2 >input{
-	display: inline-block;
-}*/
+/*Button*/
 
 #button {
 	text-align: center;
-	}
-	
+}
+/*Song display Div*/
 #song-display {
 	background: #FEFAC0;
 	float: right;
