@@ -10,3 +10,13 @@
 #modify-music >ul >li {
 	display: inline;
 }
+
+#music-adder {
+	background: #4DD7FA;
+	display: inline-block;
+}
+
+#music-adder >input {
+	display: block;
+}
+	
