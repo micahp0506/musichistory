@@ -1,0 +1,12 @@
+#modify-music {
+	background: #FFB4B0;
+	border: 1px solid black;
+}
+
+#modify-music >ul {
+	list-style-type: none;
+}
+
+#modify-music >ul >li {
+	display: inline;
+}
