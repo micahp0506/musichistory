@@ -19,4 +19,9 @@
 #music-adder >input {
 	display: block;
 }
+
+#additional-options {
+	display: inline-block;
+	flaot: right;
+}
 	
