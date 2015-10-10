@@ -3,7 +3,7 @@
 #modify-music {
 	background: #FFB4B0;
 	border: 2px solid black;
-	width: 100%;
+	width: 99.3%;
 }
 
 #modify-music >ul {
@@ -15,11 +15,19 @@
 }
 /*Music adder div*/
 #music-adder {
+	float: left;
 	background: #4DD7FA;
 	display: inline-block;
 	margin-top: 10px;
 	border: 2px solid black;
-	height: 409px;
+	height: 403px;
+	width: 19%;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+#music-adder >label >.song-length {
+	padding-top: -5px;
 }
 
 #music-adder>input {
@@ -28,7 +36,7 @@
 
 #music1 >#options1 >li{
 	list-style-type: none;
-	margin-left: -40px;
+	
 }
 
 #music2 >#options2 >li{
@@ -37,10 +45,11 @@
 }
 
 #music1 {
+	margin-left: -15px;
 	float: left;
 }
 #music2 {
-	float: right;
+	float: left;
 }
 
 /*Button*/
@@ -49,13 +58,19 @@
 	clear: both;
 	text-align: center;
 }
+
+#button >#submit {
+	width: 100px;
+	border: 1px solid black;
+}
 /*Song display Div*/
 #song-display {
 	background: #FEFAC0;
-	float: right;
-	width: 80%;
+	float: left;
+	width: 79%;
 	border: 2px solid black;
 	margin-top: 10px;
+	margin-left: 6px;
 }
 
 #song-display >ul>li {
