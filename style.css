@@ -115,10 +115,22 @@
 
 .song-name {
 	color: #785616;
-	padding-left: 40px;
+	/*padding-left: 40px;*/
 }
 
 #song-display {
 	color: #785616;
 	padding-left: 40px;
+}
+
+#song-display p:nth-child(2n+0) {
+	background: #FFF5EE;
+}
+
+#song-display p:nth-child(2n+1) {
+	background: #F5FFFA;
+}
+
+#song-display p:first-of-type {
+	font-weight: bold;
 }

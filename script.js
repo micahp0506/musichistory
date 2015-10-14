@@ -183,9 +183,9 @@ for (var i =0; i < songs.length; i++) {
 	var albumName = song.slice(song.indexOf("album")+6);
 	console.log(albumName);
 
-	newSongs[i] = "<h2>" + songName + 
+	newSongs[i] = "<p>" + songName + 
 		" by " + artistName + 
-		" on the album " + albumName + "</h2>";
+		" on the album " + albumName + "</p>";
 }
 
 for (var j = 0; j < newSongs.length; j++) {
