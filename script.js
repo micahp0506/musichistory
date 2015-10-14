@@ -185,7 +185,7 @@ for (var i =0; i < songs.length; i++) {
 
 	newSongs[i] = "<h2>" + songName + 
 		" by " + artistName + 
-		" on the album " + albumName + "</h2";
+		" on the album " + albumName + "</h2>";
 }
 
 for (var j = 0; j < newSongs.length; j++) {
