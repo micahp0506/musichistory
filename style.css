@@ -1,97 +1,63 @@
-/*Flex container*/
-.flex-container {
-  padding: 0;
-  list-style: none;
-  height: 50em;
-  display: flex;
-  -webkit-flex-direction: row;
-  -webkit-flex-wrap: wrap;
-}
 
 /*Navigation*/
 
-.modify-music {
-	top: 0;
-	left: 0;
+#modify-music {
 	background: #FFB4B0;
 	border: 2px solid black;
-	width: 100%;
-	position: fixed;
-	box-sizing: border-box;
-	/*width: 100%;*/
-	/*height: 4em;*/
-	/*flex: 100%;*/
-	/*margin: auto;*/
-  	
+	width: 99.3%;
 }
 
-.modify-music >ul {
+#modify-music >ul {
 	list-style-type: none;
-	/*margin-left: 25px;*/
-
 }
 
-.modify-music >ul >li {
+#modify-music >ul >li {
 	display: inline;
-
 }
 /*Music adder div*/
-.music-adder {
-	/*float: left;*/
+#music-adder {
+	float: left;
 	background: #4DD7FA;
-	/*display: inline-block;*/
-	margin-top: 60px;
+	display: inline-block;
+	margin-top: 10px;
 	border: 2px solid black;
-	/*height: 403px;*/
-	/*width: 19%;*/
+	height: 403px;
+	width: 19%;
 	padding-left: 5px;
 	padding-top: 5px;
-    flex-grow: 1;
-
 }
 
-.music-adder >.song-length {
-	padding-top: 5px;
-	/*display: -webkit-flex;*/
-    /*display: -ms-flexbox;*/
-    /*display: flex;*/
+#music-adder >label >.song-length {
+	padding-top: -5px;
 }
 
-.music-adder>input {
+#music-adder>input {
 	display: block;
 }
 
 #music1 >#options1 >li{
 	list-style-type: none;
-	/*display: -webkit-flex;*/
-    /*display: -ms-flexbox;*/
-    /*display: flex;*/
 	
 }
 
 #music2 >#options2 >li{
 	list-style-type: none;
-	/*display: -webkit-flex;*/
-    /*display: -ms-flexbox;*/
-    /*display: flex;*/
 
 }
 
 #music1 {
-	/*margin-left: -35px;*/
+	margin-left: -15px;
 	float: left;
-	
 }
 #music2 {
 	float: left;
-	}
+}
 
 /*Button*/
 
 #button {
 	clear: both;
 	text-align: center;
-	margin: 0 auto;
 }
 
 #button >#submit {
@@ -99,38 +65,25 @@
 	border: 1px solid black;
 }
 /*Song display Div*/
-.song-display {
+#song-display {
 	background: #FEFAC0;
-	/*float: left;*/
-	/*width: 79%;*/
+	height: 408px;
+	float: left;
+	width: 77.5%;
 	border: 2px solid black;
-	margin-top: 60px;
+	margin-top: 10px;
 	margin-left: 6px;
-	flex-grow: 1.5;
+	color: #785616;
+	padding-left: 20px;
 }
 
-.song-display >ul>li {
+#song-display >ul>li {
 	display: inline-block;
+
+
 }
 
 .song-name {
 	color: #785616;
-	/*padding-left: 40px;*/
-}
-
-#song-display {
-	color: #785616;
-	padding-left: 40px;
-}
-
-#song-display p:nth-child(2n+0) {
-	background: #FFF5EE;
-}
-
-#song-display p:nth-child(2n+1) {
-	background: #F5FFFA;
-}
-
-#song-display p:first-of-type {
-	font-weight: bold;
+	padding-left: 140px;
 }
