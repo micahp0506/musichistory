@@ -9,19 +9,28 @@
   <body>
   <!-- Navigation -->
   <header>
+    <div id="musichistory">Music History</div>
     <div id="modify-music">
       <ul>
-        <li>View Music</li>
+        <li><a href="#" id="view-music">View Music</a></li>
         <li>|</li>
-        <li><a href="#">Add Music</a></li>
+        <li><a href="#" id="add-music">Add Music</a></li>
         <li>|</li>
-        <li><a href="#">List Music</a></li>
-      </ul>   
-    </div>
+        <li><a href="#" id="list-music">List Music</a></li>
+      </ul>
+    
+     <div id="add-song" class="hidden"> 
+        Song:<input type="text" id="song-name">
+        Artist:<input type="text" id="artist-name">
+        Album:<input type="text" id="album-name">
+        <button id="add">Add</button>
+     </div> 
+    </div> 
   </header> 
 
+  <div id="main-content">
   <!-- Music Adder Div -->
-    <form id="music-adder">
+    <div id="music-adder">
       <label class="song-length">Song length:</label>
       <input type ="range" name="song-length" step="2" min="20" max="30">
       <p>Artist:</p>
@@ -63,7 +72,7 @@
       <div id="button">
         <input type="submit" id="submit" value="Filter"></input>
       </div>  
-    </form>
+    </div>
     <!-- Song Display Div -->
     <div id="song-display">
       <!-- <h1 id="song-name">She Talks To Angels</h1>
@@ -100,6 +109,7 @@
       </ul> -->  
 
     </div>
+  </div>
 
 
     <!-- <div id="container">

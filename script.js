@@ -153,6 +153,34 @@ sonnetElement.innerHTML = sonnetText;
 sonnetElement.innerHTML = sonnetText.replace(/the/g, "a large");
 */
 
+function add() {
+	var songName = document.getElementById("song-name").value;
+	console.log(songName);
+	var artistName = document.getElementById("artist-name").value;
+	console.log(artistName);
+	var albumName = document.getElementById("album-name").value;
+	console.log(albumName);
+	newSongs[i] = "<p>" + songName + 
+		" by " + artistName + 
+		" on the album " + albumName + "</p>";
+	document.getElementById("song-display").innerHTML += newSongs[i];
+}	
+
+function removeAddSong(event) {
+	document.getElementById("add-song").classList.add("visible");
+	document.getElementById("main-content").classList.add("hidden");
+
+}
+
+function addListMusic (event) {
+	document.getElementById("main-content").classList.remove("hidden");
+	document.getElementById("add-song").classList.remove("visible");
+}
+
+
+function addViewMusic (event) {
+}
+
 var songs = [];
 var newSongs = [];
 
@@ -192,9 +220,17 @@ for (var j = 0; j < newSongs.length; j++) {
 	document.getElementById("song-display").innerHTML += newSongs[j];
 }
 
+var addButton = document.getElementById("add");
+addButton.addEventListener("click", add);
 
+var addMusic = document.getElementById("add-music");
+addMusic.addEventListener("click", removeAddSong);
 
+var addList = document.getElementById("list-music");
+addList.addEventListener("click", addListMusic);
 
+var viewMusic = document.getElementById("view-music");
+viewMusic.addEventListener("click", addViewMusic)
 
 // var newSong = songs.slice[1, 24];
 
