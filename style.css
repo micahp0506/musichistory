@@ -1,44 +1,75 @@
 
 body {
-	background: lightgrey;
+	background-color: white;
+	color: transparent;
+ 	background: -webkit-linear-gradient(transparent, transparent),
+             url(http://sonyericssonwallpapers.com/wp-content/uploads/2013/07/181780.jpg) repeat;
+ 	-webkit-background-clip: text;
 }
-
 #musichistory {
 	text-align: center;
 	font-family: impact;
-	font-size: 5em;
+	font-size: 8em;
 }
 /*Navigation*/
 
 #modify-music {
-	background: white;
-	border: 2px solid black;
-	width: 99.3%;
-	-webkit-box-shadow: 1px 3px 36px 18px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 3px 36px 18px rgba(0,0,0,0.75);
-box-shadow: 1px 3px 36px 18px rgba(0,0,0,0.75);
+	background: transparent;
+	border-top: 1px solid #D4D4D4;
+	border-bottom: 1px solid #D6D6D6;
+	border-width: 75%;
+	margin-left: 10%;
+	margin-right: 10%;
 	text-align: center;
+	color: black;
+
 }
 
-#modify-music >ul {
-	list-style-type: none;
-}
 
 #modify-music >ul >li {
 	display: inline;
+
+}
+
+#modify-music >ul >li >a {
+	text-decoration: none;
+	color: black;
+}
+ 
+#view-music {
+	padding-right: 20px;
+}
+
+#add-music {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#list-music {
+	padding-left: 20px;
+}
+
+/*Add song div/hidden by default*/
+#add-song {
+	color: black;
+	text-align: center;
 }
 
 #add-song >ul >li {
-	lis
+	list-style-type: none;
+	text-align: center;	
+	display: inline-block;
 }
-#modify-music >#add-music >ul >li {
-	list-style-type:  none;
-	display: inline;
+
+/*Main content div*/
+#main-content {
+	text-align: center;
 }
-/*Music adder div(left)*/
+
+/*Music adder div(bottom)*/
 #music-adder {
-	float: left;
-	background: #4DD7FA;
+	background: white;
+	color: black;
 	display: inline-block;
 	margin-top: 10px;
 	border: 2px solid black;
@@ -52,18 +83,13 @@ box-shadow: 1px 3px 36px 18px rgba(0,0,0,0.75);
 	padding-top: -5px;
 }
 
-/*#music-adder>input {
-	display: block;
-}*/
-
 #music1 >#options1 >li{
 	list-style-type: none;
 	
 }
 
 #music2 >#options2 >li{
-	list-style-type: none;
-
+	list-style-type: none;	
 }
 
 #music1 {
@@ -85,33 +111,26 @@ box-shadow: 1px 3px 36px 18px rgba(0,0,0,0.75);
 	width: 100px;
 	border: 1px solid black;
 }
-/*Song display Div(right)*/
+/*Song display Div(top)*/
 #song-display {
-	background: #FEFAC0;
+	background: url(https://www.colourbox.com/preview/1167786-abstract-music-inspired-graphic-equalizer-background-with-rainbow-colours.jpg);
 	/*height: 408px;*/
-	float: left;
 	width: 77.5%;
 	border: 2px solid black;
-	margin-top: 10px;
-	margin-left: 6px;
-	color: #785616;
+	/*margin-top: 10px;*/
+	color: black;
 	padding-left: 20px;
+	text-align: center;
+	margin: 0 auto;
 }
 
-/*#song-display >ul>li {
-	display: inline-block;
 
-
-}*/
 
 .song-name {
 	color: #785616;
-	padding-left: 140px;
+	/*padding-left: 140px;*/
 }
 
-/*#add-song {
-	display: none;
-}*/
 
 .hidden {
 	display: none;
@@ -123,4 +142,3 @@ box-shadow: 1px 3px 36px 18px rgba(0,0,0,0.75);
 .show {
 	display: none;
 }
-
