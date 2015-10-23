@@ -11,6 +11,20 @@ body {
 	font-family: impact;
 	font-size: 8em;
 }
+
+/*Logo*/
+img {
+	display: block;
+	margin: 0 auto;
+	height: 35px;
+}
+
+#logo >p {
+	text-align: center;
+	font-size: 10px;
+	font-family: cursive;
+	margin-top: -2px;
+}
 /*Navigation*/
 
 #modify-music {
@@ -71,10 +85,10 @@ body {
 	background: white;
 	color: black;
 	display: inline-block;
-	margin-top: 10px;
-	border: 2px solid black;
-	height: 403px;
-	width: 19%;
+	width: 80%;
+	border-top: 1px solid #D4D4D4;
+	border-bottom: 1px solid #D6D6D6;
+	border-width: 75%;
 	padding-left: 5px;
 	padding-top: 5px;
 }
@@ -121,7 +135,7 @@ body {
 	color: black;
 	padding-left: 20px;
 	text-align: center;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 

@@ -213,14 +213,17 @@ for (var i =0; i < songs.length; i++) {
 	console.log(artistName);
 	var albumName = song.slice(song.indexOf("album")+6);
 	console.log(albumName);
-
+	$("#artist").append("<option>" + artistName + "</option>");
+	$("#album").append("<option>" + albumName + "</option>");
 	newSongs[i] = "<p>" + songName + 
 		" by " + artistName + 
 		" on the album " + albumName + "</p>";
+
+
 }
 
 for (var j = 0; j < newSongs.length; j++) {
-	document.getElementById("song-display").innerHTML += newSongs[j];
+	$("#song-display").append(newSongs[j]);
 }
 
 
@@ -233,6 +236,8 @@ $("#add").click(function(){
 		" by " + artistName + 
 		" on the album " + albumName + "</p>";
 	$("#song-display").append(newSongs[i]);
+	$("#artist").append("<option>" + artistName + "</option>");
+	$("#album").append("<option>" + albumName + "</option>");
 });
 // var addButton = document.getElementById("add");
 // addButton.addEventListener("click", add);
@@ -242,7 +247,7 @@ $("#add").click(function(){
 // 	$("#main-content").toggle();
 // });
 
-$("#add-music").click(function(){
+$("#add-music").click(function() {
 	$("#add-song").toggle();
 	$("#main-content").toggle();
 });

@@ -9,16 +9,20 @@
   <body>
   <!-- Navigation -->
   <header>
-    <div id="musichistory">Music History</div>
-    <div id="modify-music">
-      <ul>
-        <li><a href="#" id="view-music">View Music</a></li>
-        <li>&#x2022;</li>
-        <li><a href="#" id="add-music">Add Music</a></li>
-        <li>&#x2022;</li>
-        <li><a href="#" id="list-music">List Music</a></li>
-      </ul>
-    </div> 
+  <div id="logo">
+    <img id="image" src="http://s11.postimg.org/6efkp2zb3/Drawing.png">
+    <p>Est. 2015</p>
+  </div>
+  <div id="musichistory">Music History</div>
+  <div id="modify-music">
+    <ul>
+      <li><a href="#" id="view-music">View Music</a></li>
+      <li>&#x2022;</li>
+      <li><a href="#" id="add-music">Add Music</a></li>
+      <li>&#x2022;</li>
+      <li><a href="#" id="list-music">List Music</a></li>
+    </ul>
+  </div> 
   </header> 
     
   <div id="add-song" class="hidden"> 
@@ -30,7 +34,7 @@
     <button id="add">Add</button>
   </div> 
 
-  <div id="main-content">
+  <div id="main-content" class="fade-main">
     <!-- Song Display Div -->
     <div id="song-display">
       <!-- <h1 id="song-name">She Talks To Angels</h1>
@@ -73,23 +77,11 @@
       <input type ="range" name="song-length" step="2" min="20" max="30">
       <p>Artist:</p>
       <select id="artist">
-        <option value="options">Options</option>
-        <option value="sturgill-simpson">Sturgill Simpson</option>
-        <option value="jason-isbell">Jason Isbell</option>
-        <option value="turnpike-troubadours">Turnpike Troubadours</option>
-        <option value="huey-lewis">Huey Lewis and The News</option>
-        <option value="black-crowes">The Black Crowes</option>
-
+        <option id="name" value="options">Options</option>
       </select>
       <p>Album:</p>
       <select id="album">
-        <option value="options">Options</option>
-        <option value="simpson-album">Sturgill Simpson Album</option>
-        <option value="isbell-album">Jason Isbell Album</option>
-        <option value="troubadours-album">Turnpike Troubadours Album</option>
-        <option value="huey-lewis-album">Huey Lewis Album</option>
-        <option value="black-crowes-album">Black Crowes Album</option>
-
+        <option id="album1" value="options">Options</option> 
       </select>
       <p>Genre:</p>
       <div id="music1">
@@ -119,7 +111,7 @@
     </div> -->
     
 
-
+    <!-- <footer>micahPwells</footer>   -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="script.js"></script>
   </body>
