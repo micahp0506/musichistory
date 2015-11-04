@@ -4,7 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>NSS Music History Project 1</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
   <body>
   <!-- Navigation -->
@@ -25,7 +26,7 @@
   </div> 
   </header> 
     
-  <div id="add-song" class="hidden"> 
+  <div id="add-song" class=""> 
     <ul>
       <li>Song:<input type="text" id="song-name"></li>
       <li>Artist:<input type="text" id="artist-name"></li>
@@ -40,15 +41,27 @@
     <!-- Music Adder Div -->
     <div id="music-adder">
       <label class="song-length">Song length:</label>
-      <input type ="range" name="song-length" step="2" min="20" max="30">
-      <p>Artist:</p>
-      <select id="artist">
-        <option id="name" value="options">Options</option>
-      </select>
-      <p>Album:</p>
-      <select id="album">
-        <option id="album1" value="options">Options</option> 
-      </select>
+      <input type ="range" name="song-length" step="0" min="20" max="30">
+      <!-- Artist button -->
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Artists
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="artist">
+          <li id="name" value="options"><a href="#">  </a></li>
+        </ul>
+      </div>
+      <!-- Album button -->
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Albums
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="album">
+          <li id="album1" value="options"><a href="#"></a></li>
+        </ul>
+      </div>
       <p>Genre:</p>
       <div id="music1">
         <ul id="options1">
@@ -71,8 +84,10 @@
     </div>
   </div>
     <!-- <footer>micahPwells</footer>   -->
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="script.js"></script>
+  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="javascripts/script.js"></script> -->
+  <script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
   </body>
 </html>
 

@@ -1,6 +1,8 @@
-$(document).ready(function() { 
+define(["jquery", "populate-songs", "get-more-songs"], 
+function($, populate, more) {
 
 
+$("#add-song").hide();
 var songs = [];
 var newSongs = [];
 
@@ -23,24 +25,12 @@ function songsIWantToAdd(songList) {
   		$(this).parent().remove();
 	});
 }
-
-$.ajax({
-	url: "songs.json"
-}).done(function(songsObject) {
-	console.log(songsObject);
-	songsIWantToAdd(songsObject);
-	
-});
+populate.getMeSomeData(songsIWantToAdd);
 
 $("body").click(function() {
 	if (event.target.id === "more") {
 		console.log('working');
-	$.ajax({
-		url: "songs2.json"
-	}).done(function(songs2Object) {	
-		$("#more").remove();
-		songsIWantToAdd(songs2Object);
-		})
+		more.getMeMoreData(songsIWantToAdd);
 	}
 });
  
@@ -66,7 +56,9 @@ $("#add").click(function() {
 });
 
 $("#add-music").click(function() {
+	console.log("click");
 	$("#add-song").toggle();
+	console.log("toggle");
 	$("#main-content").toggle();
 });
 
@@ -75,9 +67,9 @@ $("#list-music").click(function() {
 });
 
 
-
-
 });
+
+
 
 
 
