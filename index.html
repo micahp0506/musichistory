@@ -59,6 +59,7 @@
   <div id="main-content" class="fade-main">
     <!-- Song Display Div/ getting content from JSON -->
     <div id="song-display"></div>
+    <button id="more">More</button>
   </div>
     <!-- Music Adder Div with bootstrap -->
       <div class="container-fluid" id="music-adder">
@@ -73,10 +74,14 @@
               <ul class="dropdown-menu" aria-labelledby="dLabel" id="artist"></ul>
             </div>
             <!-- Album -->
-            <p>Album:</p>
-            <select id="album">
-              <option id="album1" value="options">Options</option> 
-            </select>
+            <div class="dropdown">
+              <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Artist
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dLabel" id="album"></ul>
+            </div>
+            <!-- Genre -->
             <p>Genre:</p>
             <div id="music1">
               <ul id="options1">

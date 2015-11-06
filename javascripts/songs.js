@@ -1,36 +1,47 @@
 
-define(["jquery", "populate-songs"],
-function($, populate) {
+define(["jquery", "populate-songs", "hbs!../templates/songs", "hbs!../templates/artist", "hbs!../templates/album"],
+function($, populate, songTemplate, artistTemplate, albumTemplate) {
 
-
+// Hiding add song section as default
 $("#add-song").hide();
+
+// Delete buttons
+$("body").click(function() {
+	if (event.target.id === "deletor") {
+		console.log("delete button is working!!!!");
+		event.target.parentNode.remove();
+		console.log(event.target.parentNode);
+		// var artistList = (event.target.parentNode);
+		// console.log(artistList);
+		// var artistListArray = artistList.split(" ");
+		// console.log(artistListArray);
+        // var albumList = $("#album").val();
+        // console.log(albumList);
+
+         // for (var i = 0; i < artistList.length; i++) {
+         //     console.log(artistList[i].innerHTML);
+         //     if (artistList[i].innerHTML === artist.innerHTML) {
+         //         artistList[i].remove();
+         //         albumList[i].remove();
+         //     }
+         //  }
+		// $("#artist").remove(event.target.parentNode);
+	}
+});
+
+// Declaring variables, possibly uneeded
 var songs = [];
 var newSongs = [];
 
-return {
-	 songsIWantToAdd: function(songList) {
-		console.log("songList", songList);
-		console.log("newSongsArray", newSongs);
-		newSongs = [];
-		for (var i =0; i < songList.songs.length; i++) {
-			console.log(songList.songs[i]);
-			$("#artist").append("<option>" + songList.songs[i].artist + "</option>");
-			$("#album").append("<option>" + songList.songs[i].album + "</option>");
-			newSongs[i] = "<p>" + songList.songs[i].title + 
-				" by " + songList.songs[i].artist + 
-				" on the album " + songList.songs[i].album + 
-				"   <button class='delete' text='Delete'>X</button>" + "</p>";
-			$(".delete").addClass(".delete");
-			$("#song-display").append(newSongs[i]);
-			console.log(newSongs[i]);
-		}
-		var moreButton = "<button id='more'>More</button>";
-		$("#song-display").append(moreButton);
-			console.log("more button is working!!");
-		$(".delete").click(function() {
-			console.log("delete button is working!!!!");
-	  		$(this).parent().remove();
-		});
-}
-};
-});
+// Returning to DOM songs to main content/artist to artist dropdown/album to album dropdown
+	return {
+		 songsIWantToAdd: function(songList) {
+			console.log("songList", songList);
+			$("#song-display").append(songTemplate(songList));
+			$("#artist").append(artistTemplate(songList));
+			console.log(artistTemplate(songList));
+			$("#album").append(albumTemplate(songList));
+			console.log(albumTemplate(songList));
+			}
+		};
+	});
