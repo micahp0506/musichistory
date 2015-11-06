@@ -89,11 +89,11 @@ img {
 #music-adder {
 	/*background: white;*/
 	color: black;
-	display: inline-block;
+	display: block;
 	// width: 80%;
 	border-top: 1px solid #D4D4D4;
 	border-bottom: 1px solid #D6D6D6;
-	// border-width: 75%;
+	border-width: 75%;
 	padding-left: 5px;
 	padding-top: 5px;
 }
@@ -139,7 +139,7 @@ img {
 	/*margin-top: 10px;*/
 	color: black;
 	padding-left: 20px;
-	text-align: center;
+	// text-align: center;
 	margin: 10px auto;
 	padding-top: 10px;
 	padding-bottom: 10px;

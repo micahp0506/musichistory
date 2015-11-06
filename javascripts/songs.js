@@ -1,7 +1,8 @@
 
 define(["jquery", "populate-songs", "hbs!../templates/songs", "hbs!../templates/artist", "hbs!../templates/album"],
 function($, populate, songTemplate, artistTemplate, albumTemplate) {
-
+// Creating "more" button
+var moreButton = "<button id='more'>More</button>";
 // Hiding add song section as default
 $("#add-song").hide();
 
@@ -9,6 +10,7 @@ $("#add-song").hide();
 $("body").click(function() {
 	if (event.target.id === "deletor") {
 		console.log("delete button is working!!!!");
+		// Removing selected item from DOM
 		event.target.parentNode.remove();
 		console.log(event.target.parentNode);
 		// var artistList = (event.target.parentNode);
@@ -37,11 +39,17 @@ var newSongs = [];
 	return {
 		 songsIWantToAdd: function(songList) {
 			console.log("songList", songList);
+			// Appending song info(song title, artist name, and album name to DOM)
 			$("#song-display").append(songTemplate(songList));
+			// Appending artist name to artist dropdown
 			$("#artist").append(artistTemplate(songList));
 			console.log(artistTemplate(songList));
+			// Appending album name to album dropdown
 			$("#album").append(albumTemplate(songList));
 			console.log(albumTemplate(songList));
+			// Appending "more" button
+			$("#song-display").append(moreButton);
+			console.log("more button is working!!");
 			}
 		};
 	});
