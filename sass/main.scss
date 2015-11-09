@@ -28,7 +28,6 @@ img {
 /*Navigation*/
 
 #modify-music {
-	background: transparent;
 	border-top: 1px solid #D4D4D4;
 	border-bottom: 1px solid #D6D6D6;
 	border-width: 75%;
@@ -78,28 +77,30 @@ img {
 
 /*Main content div*/
 #main-content {
-	text-align: center;
+	// text-align: center;
 }
 
 // .dropdown {
 // 	position: relative;
 // }
 
-/*Music adder div(bottom)*/
+/*Music adder div(left)*/
 #music-adder {
-	/*background: white;*/
 	color: black;
 	display: block;
-	// width: 80%;
-	border-top: 1px solid #D4D4D4;
-	border-bottom: 1px solid #D6D6D6;
+	border: 2px solid black;
+	margin: 10px;
 	border-width: 75%;
 	padding-left: 5px;
-	padding-top: 5px;
+	padding-top: 10px;
 }
 
 #music-adder >label >.song-length {
-	padding-top: -5px;
+	padding-top: -50px;
+}	
+
+#song-length {
+	display: block;
 }
 
 #music1 >#options1 >li{
@@ -130,17 +131,14 @@ img {
 	width: 100px;
 	border: 1px solid black;
 }
-/*Song display Div(top)*/
+/*Song display Div(right)*/
 #song-display {
 	background: url(https://www.colourbox.com/preview/1167786-abstract-music-inspired-graphic-equalizer-background-with-rainbow-colours.jpg);
-	/*height: 408px;*/
-	width: 77.5%;
 	border: 2px solid black;
-	/*margin-top: 10px;*/
 	color: black;
 	padding-left: 20px;
-	// text-align: center;
-	margin: 10px auto;
+	text-align: center;
+	margin: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -154,7 +152,6 @@ img {
 
 .song-name {
 	color: #785616;
-	/*padding-left: 140px;*/
 }
 
 

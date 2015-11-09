@@ -56,31 +56,24 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12"> 
+    <div class="col-md-4"> 
       <!-- Main Content Div -->
       <div id="main-content" class="fade-main">
-        <!-- Song Display Div/ getting content from JSON -->
-        <div id="song-display"></div>
-      </div>
-    </div>
-  </div>
-    <!-- Music Adder Div with bootstrap -->
-      <div class="container-fluid" id="music-adder">
-        <div class="row">
-          <div class="col-md-9">
-            <!-- Artist -->
-            <div class="dropdown">
-              <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Artist
-                <span class="caret"></span>
-              </button>
+      <!-- Music Adder Div with bootstrap -->
+        <div class="container-fluid" id="music-adder">
+          <!-- Artist -->
+          <div class="dropdown">
+            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Artist
+            <span class="caret"></span>
+            </button>
               <ul class="dropdown-menu" aria-labelledby="dLabel" id="artist"></ul>
-            </div>
+          </div>
             <!-- Album -->
             <div class="dropdown">
               <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Album
-                <span class="caret"></span>
+              Album
+              <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dLabel" id="album"></ul>
             </div>
@@ -92,7 +85,7 @@
                 <li><input type="checkbox" name="genre" value="pop"> Pop</li>
                 <li><input type="checkbox" name="genre" value="blues"> Blues</li>
               </ul>
-             </div>
+            </div>
             <div id="music2">  
               <ul id="options2">
                 <li><input type="checkbox" name="genre" value="country"> Country</li>
@@ -100,19 +93,26 @@
                 <li><input type="checkbox" name="genre" value="hip-hop"> Hip hop</li>
               </ul>
             </div>
-          </div>
             <!-- Song Length -->
-          <div class="col-md-3">
-            <label class="song-length">Song length:</label>
-            <input type ="range" name="song-length" step="0" min="20" max="30">
-          </div>
+            <div id="song-length">
+              <label class="song-length">Song length:</label>
+              <input type ="range" name="song-length" step="0" min="20" max="30">
+            </div>
         </div>  
       </div>      
-    <!-- Button -->
-    <div id="button">
-      <input type="submit" id="submit" value="Filter"></input>
-    </div>  
-    <!-- <footer>micahPwells</footer>   -->
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <div id="song-display"></div>
+      </div>
+    </div>
+  <!-- Song Display Div/ getting content from JSON -->
+  </div>
+  <!-- Button -->
+  <div id="button">
+    <input type="submit" id="submit" value="Filter"></input>
+  </div>  
+  <!-- <footer>micahPwells</footer>   -->
   <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
   <!-- <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
   <!-- <script src="javascripts/script.js"></script> -->
