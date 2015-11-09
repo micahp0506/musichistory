@@ -16,13 +16,11 @@
 		console.log(albumName);
 		// New song object
 		var songObject = {
-		  "songs": [
-		    {
+			
 		      "title": songName,
 		      "artist": artistName,
 		      "album": albumName
-		    },
-			]
+		 
 		};
 		// Sending added song to Firebase
 		$.ajax({
@@ -33,7 +31,7 @@
 		  	console.log("New Song", addedSong);
 		  });
 		
-		// // Appending song info(song title, artist name, and album name to DOM)
+		// Appending song info(song title, artist name, and album name to DOM)
 		$("#song-display").append(songTemplate(songObject));
 		console.log(songTemplate(songObject));
 		// Appending artist name to artist dropdown
