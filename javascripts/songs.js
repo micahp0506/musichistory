@@ -1,8 +1,7 @@
 
 define(["jquery", "populate-songs", "hbs!../templates/songs", "hbs!../templates/artist", "hbs!../templates/album"],
 function($, populate, songTemplate, artistTemplate, albumTemplate) {
-// Creating "more" button
-var moreButton = "<button id='more'>More</button>";
+
 // Hiding add song section as default
 $("#add-song").hide();
 
@@ -47,9 +46,6 @@ var newSongs = [];
 			// Appending album name to album dropdown
 			$("#album").append(albumTemplate(songList));
 			console.log(albumTemplate(songList));
-			// Appending "more" button
-			$("#song-display").append(moreButton);
-			console.log("more button is working!!");
 			}
 		};
 	});

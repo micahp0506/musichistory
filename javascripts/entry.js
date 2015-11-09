@@ -14,7 +14,7 @@ requirejs.config({
 });
 
 
-require(["bootstrap", "script"], 
-function(b, script) {
+require(["bootstrap", "script", "add"], 
+function(b, script, add) {
 }); 
 	
