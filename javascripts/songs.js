@@ -30,6 +30,41 @@ $("body").click(function() {
 	}
 });
 
+// Getting the value of checked option in artist dropdown
+
+$("#artist").on("click", "li", function (event) {
+	var artistVal = $(event.target).text();
+    console.log("artistVal", artistVal);
+	$(".songp").show();
+	console.log("yep");
+	$(event.target).parents().siblings(".button-artist").html(artistVal + '<span class="caret"></span>');
+	console.log("yep2", $(event.target).parents().siblings());
+	$(".songp").not(':contains("' + artistVal +'")').hide();
+	console.log("yep3");
+});
+
+
+
+
+
+// $("#artist").click(function(){
+//     var artistVal = $(event.target).text();
+//     console.log("artistVal", artistVal);
+
+
+
+
+//     	// for (var i = 0; i < songObject.length; i++);
+//     	// 	console.log("songObject2", songObject[i]); 	
+// });
+
+
+// Getting the value of checked option in artist dropdown
+$("#album").click(function(){
+    var albumVal = $(event.target).text();
+    console.log("albumVal", albumVal);
+});
+
 // Declaring variables, possibly uneeded
 var songs = [];
 var newSongs = [];
@@ -42,10 +77,16 @@ var newSongs = [];
 			$("#song-display").append(songTemplate(songList));
 			// Appending artist name to artist dropdown
 			$("#artist").append(artistTemplate(songList));
-			console.log(artistTemplate(songList));
+			console.log("artist", artistTemplate(songList));
 			// Appending album name to album dropdown
 			$("#album").append(albumTemplate(songList));
-			console.log(albumTemplate(songList));
+			console.log("album", albumTemplate(songList));
 			}
 		};
-	});
+	
+
+
+});
+
+
+
