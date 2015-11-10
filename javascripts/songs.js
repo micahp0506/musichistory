@@ -12,26 +12,10 @@ $("body").click(function() {
 		// Removing selected item from DOM
 		event.target.parentNode.remove();
 		console.log(event.target.parentNode);
-		// var artistList = (event.target.parentNode);
-		// console.log(artistList);
-		// var artistListArray = artistList.split(" ");
-		// console.log(artistListArray);
-        // var albumList = $("#album").val();
-        // console.log(albumList);
-
-         // for (var i = 0; i < artistList.length; i++) {
-         //     console.log(artistList[i].innerHTML);
-         //     if (artistList[i].innerHTML === artist.innerHTML) {
-         //         artistList[i].remove();
-         //         albumList[i].remove();
-         //     }
-         //  }
-		// $("#artist").remove(event.target.parentNode);
 	}
 });
 
-// Getting the value of checked option in artist dropdown
-
+// Filter by artist dropdown. Will show selected artist full song description(title, artist, album) in DOM
 $("#artist").on("click", "li", function (event) {
 	var artistVal = $(event.target).text();
     console.log("artistVal", artistVal);
@@ -43,27 +27,25 @@ $("#artist").on("click", "li", function (event) {
 	console.log("yep3");
 });
 
-
-
-
-
-// $("#artist").click(function(){
-//     var artistVal = $(event.target).text();
-//     console.log("artistVal", artistVal);
-
-
-
-
-//     	// for (var i = 0; i < songObject.length; i++);
-//     	// 	console.log("songObject2", songObject[i]); 	
-// });
-
-
-// Getting the value of checked option in artist dropdown
-$("#album").click(function(){
-    var albumVal = $(event.target).text();
-    console.log("albumVal", albumVal);
+// Filter by album dropdown. Will show selected album full song description(title, artist, album) in DOM
+$("#album").on("click", "li", function (event) {
+	var artistVal = $(event.target).text();
+    console.log("artistVal", artistVal);
+	$(".songp").show();
+	console.log("yep");
+	$(event.target).parents().siblings(".button-artist").html(artistVal + '<span class="caret"></span>');
+	console.log("yep2", $(event.target).parents().siblings());
+	$(".songp").not(':contains("' + artistVal +'")').hide();
+	console.log("yep3");
 });
+
+// Clearing filters button
+$("#button").click(function(){
+	$("#artist").siblings(".button-artist").html("Artists" + '<span class="caret"></span>');
+	$("#album").siblings(".button-artist").html("Albums" + '<span class="caret"></span>');
+	$(".songp").show();
+});
+
 
 // Declaring variables, possibly uneeded
 var songs = [];
@@ -84,8 +66,6 @@ var newSongs = [];
 			}
 		};
 	
-
-
 });
 
 
