@@ -93,6 +93,7 @@ img {
 	border-width: 75%;
 	padding-left: 5px;
 	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #music-adder >label >.song-length {
@@ -131,6 +132,18 @@ img {
 	width: 100px;
 	border: 1px solid black;
 }
+
+// Artist button/dropdown
+.button-artist {
+	width: 80px;
+}
+
+// Album button/dropdown
+.button-album {
+	width: 80px;
+	margin-top: 5px;
+}
+
 /*Song display Div(right)*/
 #song-display {
 	background: url(https://www.colourbox.com/preview/1167786-abstract-music-inspired-graphic-equalizer-background-with-rainbow-colours.jpg);

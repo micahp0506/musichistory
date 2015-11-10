@@ -68,7 +68,8 @@ img {
   margin: 10px;
   border-width: 75%;
   padding-left: 5px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 #music-adder > label > .song-length {
   padding-top: -50px; }
@@ -97,6 +98,13 @@ img {
 #button > #submit {
   width: 100px;
   border: 1px solid black; }
+
+.button-artist {
+  width: 80px; }
+
+.button-album {
+  width: 80px;
+  margin-top: 5px; }
 
 /*Song display Div(right)*/
 #song-display {
