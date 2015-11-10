@@ -21,7 +21,7 @@ $("#artist").on("click", "li", function (event) {
     console.log("artistVal", artistVal);
 	$(".songp").show();
 	console.log("yep");
-	$(event.target).parents().siblings(".button-artist").html(artistVal + '<span class="caret"></span>');
+	$(event.target).parents().siblings(".button-artist").html(artistVal + '<span id="deletor" class="caret"></span>');
 	console.log("yep2", $(event.target).parents().siblings());
 	$(".songp").not(':contains("' + artistVal +'")').hide();
 	console.log("yep3");
@@ -29,20 +29,21 @@ $("#artist").on("click", "li", function (event) {
 
 // Filter by album dropdown. Will show selected album full song description(title, artist, album) in DOM
 $("#album").on("click", "li", function (event) {
-	var artistVal = $(event.target).text();
-    console.log("artistVal", artistVal);
+	var albumVal = $(event.target).text();
+    console.log("albumVal", albumVal);
 	$(".songp").show();
 	console.log("yep");
-	$(event.target).parents().siblings(".button-artist").html(artistVal + '<span class="caret"></span>');
+	$(event.target).parents().siblings(".button-artist").html(albumVal + '<span id="deletor" class="caret"></span>');
 	console.log("yep2", $(event.target).parents().siblings());
-	$(".songp").not(':contains("' + artistVal +'")').hide();
+	$(".songp").not(':contains("' + albumVal +'")').hide();
 	console.log("yep3");
 });
 
 // Clearing filters button
 $("#button").click(function(){
-	$("#artist").siblings(".button-artist").html("Artists" + '<span class="caret"></span>');
-	$("#album").siblings(".button-artist").html("Albums" + '<span class="caret"></span>');
+	console.log("click");
+	$("#artist").siblings(".button-artist").html("Artists" + '<span id="deletor" class="caret"></span>');
+	$("#album").siblings(".button-artist").html("Albums" + '<span id="deletor" class="caret"></span>');
 	$(".songp").show();
 });
 
@@ -56,12 +57,12 @@ var newSongs = [];
 		 songsIWantToAdd: function(songList) {
 			console.log("songList", songList);
 			// Appending song info(song title, artist name, and album name to DOM)
-			$("#song-display").append(songTemplate(songList));
+			$("#song-display").html(songTemplate(songList));
 			// Appending artist name to artist dropdown
-			$("#artist").append(artistTemplate(songList));
+			$("#artist").html(artistTemplate(songList));
 			console.log("artist", artistTemplate(songList));
 			// Appending album name to album dropdown
-			$("#album").append(albumTemplate(songList));
+			$("#album").html(albumTemplate(songList));
 			console.log("album", albumTemplate(songList));
 			}
 		};

@@ -11,22 +11,18 @@
   <!-- Navigation -->
   <header>
     <div class="row">
-      <div class="col-md-5"></div>
-      <div class="col-md-2">
+      <div class="col-md-12">
         <div id="logo">
           <img id="image" src="http://s11.postimg.org/6efkp2zb3/Drawing.png">
           <p>Est. 2015</p>
         </div>
       </div>
-      <div class="col-md-5"></div>
     </div>
 
     <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
+      <div class="col-md-12">
         <div id="musichistory">Music History</div>
       </div>
-      <div class="col-md-2"></div>
     </div>
     <div class="row">
       <div class="col-md-12">
@@ -55,12 +51,16 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <!-- Main Content Div -->
+  <div class="row fade-main" id="main-content">
     <div class="col-md-4"> 
-      <!-- Main Content Div -->
-      <div id="main-content" class="fade-main">
       <!-- Music Adder Div with bootstrap -->
         <div class="container-fluid" id="music-adder">
+          <!-- Song Length -->
+          <div id="song-length">
+            <label class="song-length">Song length:</label>
+            <input type ="range" name="song-length" step="0" min="20" max="30">
+          </div>
           <!-- Artist -->
           <div class="dropdown">
             <button id="dLabel" class="button-artist" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -93,29 +93,20 @@
                 <li><input type="checkbox" name="genre" value="hip-hop"> Hip hop</li>
               </ul>
             </div>
-            <!-- Song Length -->
-            <div id="song-length">
-              <label class="song-length">Song length:</label>
-              <input type ="range" name="song-length" step="0" min="20" max="30">
-            </div>
-        </div>  
-      </div>      
+          <div id="button">
+            <input type="submit" id="submit" value="Clear Filters"></input>
+          </div>  
+        </div>       
     </div>
     <div class="row">
       <div class="col-md-7">
+        <!-- Song Display Div/ getting content from JSON -->
         <div id="song-display"></div>
       </div>
     </div>
-  <!-- Song Display Div/ getting content from JSON -->
   </div>
   <!-- Button -->
-  <div id="button">
-    <input type="submit" id="submit" value="Clear Filters"></input>
-  </div>  
   <!-- <footer>micahPwells</footer>   -->
-  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
-  <!-- <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
-  <!-- <script src="javascripts/script.js"></script> -->
   <script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
   </body>
 </html>

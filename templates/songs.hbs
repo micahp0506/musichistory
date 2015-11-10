@@ -1,7 +1,9 @@
 
 {{!-- Template for complete song description  --}}
-<div class="">
-	{{#each songs}}
-		<p class="songp">{{title}} by <span class="temp-artist">{{artist}}</span> on the album <span class="temp-album">{{album}}<span>   <button class='delete' id="deletor" text='Delete'>X</button></p>
-	{{/each}}
-</div>	
+{{#each songs}}
+	<div>
+		<p class='songp'>
+			{{title}} by {{artist}} on the album {{album}}   <button class='delete' id='deletor' text='delete'>X</button>
+		</p>
+	</div>	
+{{/each}}

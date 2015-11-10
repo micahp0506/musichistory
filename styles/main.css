@@ -59,23 +59,15 @@ img {
   text-align: center;
   display: inline-block; }
 
-/*Main content div*/
 /*Music adder div(left)*/
 #music-adder {
   color: black;
   display: block;
   border: 2px solid black;
   margin: 10px;
-  border-width: 75%;
   padding-left: 5px;
   padding-top: 10px;
   padding-bottom: 10px; }
-
-#music-adder > label > .song-length {
-  padding-top: -50px; }
-
-#song-length {
-  display: block; }
 
 #music1 > #options1 > li {
   list-style-type: none; }
@@ -111,7 +103,6 @@ img {
   background: url(https://www.colourbox.com/preview/1167786-abstract-music-inspired-graphic-equalizer-background-with-rainbow-colours.jpg);
   border: 2px solid black;
   color: black;
-  padding-left: 20px;
   text-align: center;
   margin: 10px;
   padding-top: 10px;
