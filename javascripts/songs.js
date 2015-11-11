@@ -2,6 +2,8 @@
 define(["jquery", "populate-songs", "hbs!../templates/songs", "hbs!../templates/artist", "hbs!../templates/album"],
 function($, populate, songTemplate, artistTemplate, albumTemplate) {
 
+ // Variable for removing items from firebase 
+var ref;
 // Hiding add song section as default
 $("#add-song").hide();
 
@@ -12,6 +14,9 @@ $("body").click(function() {
 		// Removing selected item from DOM
 		event.target.parentNode.remove();
 		console.log(event.target.parentNode);
+		// Removing selected from Firebase
+		ref = new Firebase("https://brilliant-heat-5523.firebaseio.com/");
+		ref.child(key).remove();
 	}
 });
 
@@ -47,11 +52,6 @@ $("#button").click(function(){
 	$(".songp").show();
 });
 
-
-// Declaring variables, possibly uneeded
-var songs = [];
-var newSongs = [];
-
 // Returning to DOM songs to main content/artist to artist dropdown/album to album dropdown
 	return {
 		 songsIWantToAdd: function(songList) {
@@ -64,6 +64,23 @@ var newSongs = [];
 			// Appending album name to album dropdown
 			$("#album").html(albumTemplate(songList));
 			console.log("album", albumTemplate(songList));
+			var seen = {};
+			// Checking to see if current artist is duplicated in artist dropdown, if so, will be removed
+			$('#artist li').each(function() {
+		    var artistname = $(this).text();
+		    	if (seen[artistname])
+		        	$(this).remove();
+		    	else
+		        	seen[artistname] = true;
+				});
+			// Checking to see if current album is duplicated in album dropdown, if so, will be removed
+			$('#album li').each(function() {
+		    var albumname = $(this).text();
+		    	if (seen[albumname])
+		        	$(this).remove();
+		    	else
+		        	seen[albumname] = true;
+				});
 			}
 		};
 	

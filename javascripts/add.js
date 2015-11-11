@@ -2,7 +2,7 @@
 function($, Handlebars, songTemplate, populate, more, songsIwant) {
 
 
-	 // Click sends songs to be added to the DOM
+	 // Click gets value on inputs, sends added data to firebase and calls function to write to DOM
 	$("#add").click(function() {
 		console.log("click");
 		// Value of song name input
@@ -29,25 +29,11 @@ function($, Handlebars, songTemplate, populate, more, songsIwant) {
 		  	method:"POST",
 		  	data: JSON.stringify(songObject)
 		  	}).done(function(addedSong) {
+		  		// Function that writes to DOM
 		  		populate.getMeSomeData(songsIwant.songsIWantToAdd);
-		  	// console.log("New Song", addedSong);
+		  	console.log("New Song", addedSong);
 		  });
-		console.log("songObject", songObject);
-		// // Checking for duplicate artists and albums
-		// var seen = {};
-		// $('p').each(function() {
-		//     var txt = $(this).text();
-		//     if (seen[txt])
-		//         $(this).remove();
-		//     else
-		//         seen[txt] = true;
-		// });
-		// // Appending artist name to artist dropdown
-		// $("#artist").append(artistName);
-		// console.log(artistName);
-		// // Appending album name to album dropdown
-		// $("#album").append(albumName);
-		// console.log(albumName);
+		
 	});
 });
 
