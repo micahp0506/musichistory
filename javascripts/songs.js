@@ -5,22 +5,9 @@ function($, _, populate, songTemplate, artistTemplate, albumTemplate, duplicate)
  // Variable for removing items from firebase 
 var ref;
 var selectedArtist;
+
 // Hiding add song section as default
 $("#add-song").hide();
-
-// Delete buttons
-$("body").click(function() {
-	if (event.target.id === "deletor") {
-		console.log("delete button is working!!!!");
-		// Removing selected item from DOM
-		selectedArtist = event.target.parentNode;
-		selectedArtist.remove();
-		console.log(event.target.parentNode);
-		// Removing selected from Firebase
-		// ref = new Firebase("https://brilliant-heat-5523.firebaseio.com/");
-		// ref.child(key).remove();
-	}
-});
 
 // Filter by artist dropdown. Will show selected artist full song description(title, artist, album) in DOM
 $("#artist").on("click", "li", function (event) {

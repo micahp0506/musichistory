@@ -15,7 +15,7 @@ requirejs.config({
 });
 
 
-require(["bootstrap", "script", "add"], 
-function(b, script, add) {
+require(["bootstrap", "script", "add", "delete"], 
+function(b, script, add, deletes) {
 }); 
 	
