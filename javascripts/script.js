@@ -1,9 +1,9 @@
-define(["jquery", "hbs", "hbs!../templates/songs", "populate-songs", "get-more-songs", "songs"], 
-function($, Handlebars, songTemplate, populate, more, songsIwant) {
+define(["jquery", "hbs", "hbs!../templates/songs", "populate-songs", "get-more-songs", "songsIWant"], 
+function($, Handlebars, songTemplate, populate, more, songsIWant) {
 
 
 	// Fucntion to send intial songs request to DOM
-	populate.getMeSomeData(songsIwant.songsIWantToAdd);
+	populate.getMeSomeData(songsIWant.songsIWantToAdd);
 
 	// Toggles the view for adding music
 	$("#add-music").click(function() {

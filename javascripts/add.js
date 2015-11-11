@@ -1,5 +1,5 @@
  define(["jquery", "hbs", "hbs!../templates/songs", "populate-songs", "get-more-songs", "songs"], 
-function($, Handlebars, songTemplate, populate, more, songsIwant) {
+function($, Handlebars, songTemplate, populate, more, songsIWant) {
 
 
 	 // Click gets value on inputs, sends added data to firebase and calls function to write to DOM
@@ -30,7 +30,7 @@ function($, Handlebars, songTemplate, populate, more, songsIwant) {
 		  	data: JSON.stringify(songObject)
 		  	}).done(function(addedSong) {
 		  		// Function that writes to DOM
-		  		populate.getMeSomeData(songsIwant.songsIWantToAdd);
+		  		populate.getMeSomeData(songsIWant.songsIWantToAdd);
 		  	console.log("New Song", addedSong);
 		  });
 		

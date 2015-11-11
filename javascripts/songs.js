@@ -1,9 +1,10 @@
 
-define(["jquery", "populate-songs", "hbs!../templates/songs", "hbs!../templates/artist", "hbs!../templates/album"],
-function($, populate, songTemplate, artistTemplate, albumTemplate) {
+define(["jquery", "lodash", "populate-songs", "hbs!../templates/songs", "hbs!../templates/artist", "hbs!../templates/album", "duplicate"],
+function($, _, populate, songTemplate, artistTemplate, albumTemplate, duplicate) {
 
  // Variable for removing items from firebase 
 var ref;
+var selectedArtist;
 // Hiding add song section as default
 $("#add-song").hide();
 
@@ -12,11 +13,12 @@ $("body").click(function() {
 	if (event.target.id === "deletor") {
 		console.log("delete button is working!!!!");
 		// Removing selected item from DOM
-		event.target.parentNode.remove();
+		selectedArtist = event.target.parentNode;
+		selectedArtist.remove();
 		console.log(event.target.parentNode);
 		// Removing selected from Firebase
-		ref = new Firebase("https://brilliant-heat-5523.firebaseio.com/");
-		ref.child(key).remove();
+		// ref = new Firebase("https://brilliant-heat-5523.firebaseio.com/");
+		// ref.child(key).remove();
 	}
 });
 
@@ -54,37 +56,39 @@ $("#button").click(function(){
 
 // Returning to DOM songs to main content/artist to artist dropdown/album to album dropdown
 	return {
+
 		 songsIWantToAdd: function(songList) {
 			console.log("songList", songList);
+			var arr = 
+				$.map(songList.songs, function (e) {
+					return e;
+			});
+
+			var uniqueArtist = duplicate.noArtistDuplicates(arr);
+			var uniqueAlbum = duplicate.noAlbumDuplicates(arr);
+
 			// Appending song info(song title, artist name, and album name to DOM)
 			$("#song-display").html(songTemplate(songList));
+			console.log("song-display", songTemplate(songList));
 			// Appending artist name to artist dropdown
-			$("#artist").html(artistTemplate(songList));
-			console.log("artist", artistTemplate(songList));
+			$("#artist").html(artistTemplate(uniqueArtist));
+			console.log("artist", artistTemplate(uniqueArtist));
 			// Appending album name to album dropdown
-			$("#album").html(albumTemplate(songList));
-			console.log("album", albumTemplate(songList));
-			var seen = {};
-			// Checking to see if current artist is duplicated in artist dropdown, if so, will be removed
-			$('#artist li').each(function() {
-		    var artistname = $(this).text();
-		    	if (seen[artistname])
-		        	$(this).remove();
-		    	else
-		        	seen[artistname] = true;
-				});
-			// Checking to see if current album is duplicated in album dropdown, if so, will be removed
-			$('#album li').each(function() {
-		    var albumname = $(this).text();
-		    	if (seen[albumname])
-		        	$(this).remove();
-		    	else
-		        	seen[albumname] = true;
-				});
-			}
-		};
-	
+			$("#album").html(albumTemplate(uniqueAlbum));
+			console.log("album", albumTemplate(uniqueAlbum));
+		
+		}
+	};
 });
+
+
+
+
+
+
+
+
+
 
 
 
