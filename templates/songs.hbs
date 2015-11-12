@@ -3,7 +3,7 @@
 {{#each songs}}
 	<div>
 		<p class='songp'>
-			{{title}} by {{artist}} on the album {{album}}   <button class='delete' id='deletor' text='delete'>X</button>
+			{{title}} by {{artist}} on the album {{album}}   <button class='delete' id='{{@key}}' text='delete'>X</button>
 		</p>
 	</div>	
 {{/each}}
