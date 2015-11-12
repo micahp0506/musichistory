@@ -30,7 +30,7 @@ function($, Handlebars, songTemplate, populate, more, songsIWant) {
 		  	data: JSON.stringify(songObject)
 		  	}).done(function(addedSong) {
 		  		// Function that writes to DOM
-		  		populate.getMeSomeData(songsIWant.songsIWantToAdd);
+		  		// populate.getMeSomeData(songsIWant.songsIWantToAdd);
 		  	console.log("New Song", addedSong);
 		  });
 		
