@@ -126,4 +126,19 @@ img {
 .show {
   display: none; }
 
+.modal {
+  top: 40%; }
+
+.modal-dialog {
+  width: 400px; }
+
+.modal-backdrop {
+  opacity: 0.25 !important; }
+
+.modal-header {
+  background: white;
+  color: black;
+  border-radius: 0;
+  font-size: .75em; }
+
 /*# sourceMappingURL=main.css.map */

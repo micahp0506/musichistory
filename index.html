@@ -93,6 +93,7 @@
                 <li><input type="checkbox" name="genre" value="hip-hop"> Hip hop</li>
               </ul>
             </div>
+          <!-- Button -->
           <div id="button">
             <input type="submit" id="submit" value="Clear Filters"></input>
           </div>  
@@ -105,7 +106,48 @@
       </div>
     </div>
   </div>
-  <!-- Button -->
+  <!-- Add and Delete modals for success and failure -->
+  <div class="modal" id="add-success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="myModalLabel">Your song was successfully added!</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="add-failure" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="myModalLabel">An error has occured, and your song was not added.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="delete-success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="myModalLabel">Your song was successfully deleted!</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="delete-failure" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="myModalLabel">An error has occured, and your song was not deleted.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   <!-- <footer>micahPwells</footer>   -->
   <script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
   </body>

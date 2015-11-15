@@ -1,5 +1,5 @@
- define(["jquery", "hbs", "hbs!../templates/songs", "populate-songs", "get-more-songs", "songs"], 
-function($, Handlebars, songTemplate, populate, more, songsIWant) {
+ define(["jquery", "hbs", "hbs!../templates/songs", "populate-songs", "get-more-songs", "songs", "addSongs"], 
+function($, Handlebars, songTemplate, populate, more, songsIWant, addSongs) {
 
 
 	 // Click gets value on inputs, sends added data to firebase and calls function to write to DOM
@@ -24,16 +24,21 @@ function($, Handlebars, songTemplate, populate, more, songsIWant) {
 		};
 		console.log("songObject", songObject);
 		// Sending added song to Firebase
-		$.ajax({
-		    url: "https://brilliant-heat-5523.firebaseio.com/songs.json",
-		  	method:"POST",
-		  	data: JSON.stringify(songObject)
-		  	}).done(function(addedSong) {
-		  		// Function that writes to DOM
-		  		// populate.getMeSomeData(songsIWant.songsIWantToAdd);
-		  	console.log("New Song", addedSong);
-		  });
+
+		addSongs(songObject)
+			.then(function(addedsong) {
+	        //log first data
+	        console.log("addedsong", addedsong);
+
+	        //set type object to be first data
+	        populate.getMeSomeData(songsIWant.songsIWantToAdd);
+	        // Showing Modal with success message
+	        $('#add-success').modal('show');
+	    	})
+	    	.fail(function(error) {	
+	    		console.log("It errored out", error);
 		
+		});
 	});
 });
 
