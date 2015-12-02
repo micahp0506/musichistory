@@ -6,7 +6,7 @@ function($, _, populate, songsIWant, deleteSongs) {
 $(document).on("click", ".delete", function() {
 		console.log("delete button is working!!!!");
 		// Removing selected item from DOM
-		var songKey = $(this).attr('id');
+		var songKey = $(this).prop('id');
 		console.log("songKey", songKey);
 		deleteSongs(songKey).then(function () {
 			console.log("Delete!");
