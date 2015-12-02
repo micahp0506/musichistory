@@ -1,0 +1,19 @@
+{
+  "songs": [
+    {
+      "title": "Palmetto Rose",
+      "artist": "Jason Isbell",
+      "album": "Something More Than Free"
+    },
+    {
+      "title": "Turtles All The Way Down",
+      "artist": "Sturgill Simpson",
+      "album": "Metamodern Sounds in Country"      
+    },
+    {
+      "title": "Legs",
+      "artist": "ZZ Top",
+      "album": "Eliminator"      
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+body {
+	background-color: white;
+}
+
+#musichistory {
+	text-align: center;
+	font-family: impact;
+	font-size: 8em;
+	color: transparent;
+	background: -webkit-linear-gradient(transparent, transparent),
+             url(http://sonyericssonwallpapers.com/wp-content/uploads/2013/07/181780.jpg) repeat;
+ 	-webkit-background-clip: text;
+}
+
+/*Logo*/
+img {
+	display: block;
+	margin: 0 auto;
+	height: 35px;
+}
+
+#logo >p {
+	text-align: center;
+	font-size: 10px;
+	font-family: cursive;
+	margin-top: -2px;
+}
+/*Navigation*/
+
+#modify-music {
+	background: transparent;
+	border-top: 1px solid #D4D4D4;
+	border-bottom: 1px solid #D6D6D6;
+	border-width: 75%;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+	color: black;
+	padding-top: 10px;
+
+}
+
+
+#modify-music >ul >li {
+	display: inline;
+
+}
+
+#modify-music >ul >li >a {
+	text-decoration: none;
+	color: black;
+}
+ 
+#view-music {
+	padding-right: 20px;
+}
+
+#add-music {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#list-music {
+	padding-left: 20px;
+}	
+
+/*Add song div/hidden by default*/
+#add-song {
+	color: black;
+	text-align: center;
+}
+
+#add-song >ul >li {
+	list-style-type: none;
+	text-align: center;	
+	display: inline-block;
+}
+
+/*Main content div*/
+#main-content {
+	text-align: center;
+}
+
+// .dropdown {
+// 	position: relative;
+// }
+
+/*Music adder div(bottom)*/
+#music-adder {
+	/*background: white;*/
+	color: black;
+	display: inline-block;
+	// width: 80%;
+	border-top: 1px solid #D4D4D4;
+	border-bottom: 1px solid #D6D6D6;
+	// border-width: 75%;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+#music-adder >label >.song-length {
+	padding-top: -5px;
+}
+
+#music1 >#options1 >li{
+	list-style-type: none;
+	
+}
+
+#music2 >#options2 >li{
+	list-style-type: none;	
+}
+
+#music1 {
+	margin-left: -15px;
+	float: left;
+}
+#music2 {
+	float: left;
+}
+
+/*Button*/
+
+#button {
+	clear: both;
+	text-align: center;
+}
+
+#button >#submit {
+	width: 100px;
+	border: 1px solid black;
+}
+/*Song display Div(top)*/
+#song-display {
+	background: url(https://www.colourbox.com/preview/1167786-abstract-music-inspired-graphic-equalizer-background-with-rainbow-colours.jpg);
+	/*height: 408px;*/
+	width: 77.5%;
+	border: 2px solid black;
+	/*margin-top: 10px;*/
+	color: black;
+	padding-left: 20px;
+	text-align: center;
+	margin: 10px auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.delete {
+	border: none;
+	background: none;
+	color: red;
+	font-size: 8px;
+}
+
+.song-name {
+	color: #785616;
+	/*padding-left: 140px;*/
+}
+
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+.show {
+	display: none;
+}
