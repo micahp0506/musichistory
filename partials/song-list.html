@@ -1,0 +1,10 @@
+
+<!-- Main Content Div -->
+<div id="main-content" class="fade-main"> 
+	<div id="song-display">
+	  <div class="song" ng-repeat="song in combinedArray | filter: filterArtist" >
+	    <p>{{song.title}} by {{song.artist}} on the album {{song.album}}   <button class='delete' text='Delete'>X</button></p>
+	  </div>
+	</div>
+</div>
+ 

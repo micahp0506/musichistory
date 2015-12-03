@@ -1,16 +1,90 @@
 <!doctype html>
 
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NSS Starter Kit - Angular</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+
+<body ng-app="MusicHistoryApp">
+  <section ng-controller="MusicHistoryCtrl">
+    <!-- Navigation -->
+    <header>
+      <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+          <div id="logo">
+            <img id="image" src="http://s11.postimg.org/6efkp2zb3/Drawing.png">
+            <p>Est. 2015</p>
+          </div>
+        </div>
+        <div class="col-md-5"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div id="musichistory">Music History</div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="modify-music">
+            <ul>
+              <li><a href="#" id="view-music">View Music</a></li>
+              <li>&#x2022;</li>
+              <li><a href="#" id="add-music">Add Music</a></li>
+              <li>&#x2022;</li>
+              <li><a href="#" id="list-music">List Music</a></li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+    </header> <!-- End of Navigation -->
+    
+
+  <div ng-view></div>
+</section>
+  <!-- // <script src="lib/bower_components/jquery/dist/jquery.min.js"></script> -->
+  <script src="lib/bower_components/angular/angular.min.js"></script>
+  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="app/musichistory.js"></script>
+  <script src="app/controllers/SongCtrl.js"></script>
+  <script src="app/factories/songstorage.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <<!doctype html> -->
+
+<!-- <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>NSS Music History Project 1</title>
     <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-  </head>
-  <body ng-app="MusicHistoryApp">
-    <section ng-controller="MusicHistoryCtrl">
+  </head> -->
+  <!-- <body ng-app="MusicHistoryApp">
+    <section ng-controller="MusicHistoryCtrl"> -->
       <!-- Navigation -->
-      <header>
+      <!-- <header>
         <div class="row">
           <div class="col-md-5"></div>
           <div class="col-md-2">
@@ -20,9 +94,9 @@
             </div>
           </div>
           <div class="col-md-5"></div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-2"></div>
           <div class="col-md-8">
             <div id="musichistory">Music History</div>
@@ -42,9 +116,9 @@
             </div> 
           </div>
         </div>
-      </header> 
-        <!-- Add song div/hidden by default -->
-      <div class="row">
+      </header> -->
+         <!-- Add song div/hidden by default -->
+      <!-- <div class="row">
         <div class="col-md-12">
           <div id="add-song" class=""> 
             <ul>
@@ -55,11 +129,13 @@
           <button id="add">Add</button>
           </div>
         </div>
-      </div>  
+      </div>  -->
       <!-- Main Content Div -->
-      <div id="main-content" class="fade-main">
+      <!-- <div id="main-content" class="fade-main"> -->
         <!-- Song Display Div/ getting content from JSON -->
-        <div id="song-display">
+        <!-- <div id="song-display">
+
+      
           <div class="song" ng-repeat="song in combinedArray | filter: filterArtist" >
             <p>{{song.title}} by {{song.artist}} on the album {{song.album}}   <button class='delete' text='Delete'>X</button></p>
           </div>
@@ -67,17 +143,17 @@
       </div>
       
       </div>
-        <!-- Music Adder Div with bootstrap -->
+        Music Adder Div with bootstrap
           <div class="container-fluid" id="music-adder">
             <div class="row">
               <div class="col-md-9">
                 <!-- Artist -->
-                <select
+                <!-- <select
                   ng-model="artist"
                   ng-options="song.artist for song in combinedArray">
-                </select>  
+                </select>  -->
                 <!-- Album -->
-                <p>Album:</p>
+                <!-- <p>Album:</p>
                 <select
                   ng-model="album"
                   ng-options="song.album for song in combinedArray"> 
@@ -97,25 +173,27 @@
                     <li><input type="checkbox" name="genre" value="hip-hop"> Hip hop</li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
                 <!-- Song Length -->
-              <div class="col-md-3">
+              <!-- <div class="col-md-3">
                 <label class="song-length">Song length:</label>
                 <input type ="range" name="song-length" step="0" min="20" max="30">
               </div>
             </div>  
           </div>      
         <!-- Button -->
-        <div id="button">
+        <!-- <div id="button">
           <input type="submit" id="submit" value="Filter"></input>
-        </div>  
+        </div>  --> 
         <!-- <footer>micahPwells</footer>   -->
   <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
   <!-- <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
-  <!-- // <script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script> -->
+  <!-- // <script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script> 
       <script src="lib/bower_components/angular/angular.min.js"></script>
+      <script src="lib/bower_components/angular-route/angular-route.js"></script>
       <script src="app/musichistory.js"></script>
+      <script src="app/controllers/songCtrl.js"></script>
     </section>
   </body>
-</html>
-
+</html> 
+ 
