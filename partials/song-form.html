@@ -3,11 +3,11 @@
     <div class="col-md-12">
       <div id="add-song" class=""> 
         <ul>
-          <li>Song:<input type="text" id="song-name"></li>
-          <li>Artist:<input type="text" id="artist-name"></li>
-          <li>Album:<input type="text" id="album-name"></li>
+          <li>Song:<input type="text" id="song-name" ng-model="newSong.title"></li>
+          <li>Artist:<input type="text" id="artist-name" ng-model="newSong.artist"></li>
+          <li>Album:<input type="text" id="album-name" ng-model="newSong.album"></li>
         </ul>  
-      <button id="add">Add</button>
+      <button ng-click="addSong()" id="add">Add</button>
       </div>
     </div>
   </div>

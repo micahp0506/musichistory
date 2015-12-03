@@ -9,6 +9,7 @@ function($q, $http) {
         $http.get('./data/songs.json')
         .success(
           function(objectFromJSONFile) {
+            console.log("loadSongs", objectFromJSONFile);
             /* 
             Convert Firebase's object of objects into an array of objects, and store it in the private variable
             */
@@ -21,29 +22,17 @@ function($q, $http) {
       }); 
   }
 
+
   // Store the promise as a private variable
   var songPromise = loadSongs();
-
   return {
     loadSongs: function () {
-      /* 
-      Return the promise for controllers to listen to. This requires the following
-      code inside the controllers
-      
-      simpleSongs.loadSongs().then(
-        function () {
-          $scope.songs = simpleSongs.getSongs();
-        },
-        function (error) {
-          console.log(error);
-        }
-      );
-      */
       return songPromise;
     },
     getSongs: function() {
       console.log("Factory returning all songs");
       return song_list;
+      console.log("song_list", song_list);
     },
     getSong: function(name) {
       console.log("Factory returning single song");

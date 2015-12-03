@@ -9,7 +9,7 @@
 
 
 <body ng-app="MusicHistoryApp">
-  <section ng-controller="MusicHistoryCtrl">
+  <section >
     <!-- Navigation -->
     <header>
       <div class="row">
@@ -34,9 +34,9 @@
         <div class="col-md-12">
           <div id="modify-music">
             <ul>
-              <li><a href="#" id="view-music">View Music</a></li>
+              <li><a href="#/songs/list" id="view-music">View Music</a></li>
               <li>&#x2022;</li>
-              <li><a href="#" id="add-music">Add Music</a></li>
+              <li><a href="#/songs/new" id="add-music">Add Music</a></li>
               <li>&#x2022;</li>
               <li><a href="#" id="list-music">List Music</a></li>
             </ul>
@@ -53,6 +53,7 @@
   <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
   <script src="app/musichistory.js"></script>
   <script src="app/controllers/SongCtrl.js"></script>
+  <script src="app/controllers/songFormCtrl.js"></script>
   <script src="app/factories/songstorage.js"></script>
 </body>
 </html>
