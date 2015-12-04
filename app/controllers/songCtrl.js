@@ -1,5 +1,5 @@
-app.controller("MusicHistoryCtrl", ["$q", "$http", "$scope", "songstorage", 
-	function($q, $http, $scope, songstorage) {
+app.controller("MusicHistoryCtrl", ["$scope", "$firebaseArray", 
+	function($scope, $firebaseArray) {
 
 		$scope.songs =[];
 		$scope.moreSongs = [];
