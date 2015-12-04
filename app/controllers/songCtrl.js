@@ -1,17 +1,12 @@
 app.controller("MusicHistoryCtrl", ["$scope", "$firebaseArray", 
 	function($scope, $firebaseArray) {
 
-		$scope.songs =[];
-		$scope.moreSongs = [];
+		// $scope.songs =[];
+		
 
-
-// Getting data from first JSON file
-		songstorage.loadSongs().then(
-			function(songs) {
-				$scope.songs = songstorage.getSongs();
-			}, function (error) {
-				console.log(error);
-			}
-		);
+	// Firebase reference
+	var ref = new Firebase("https://brilliant-heat-5523.firebaseio.com/songs");
+	// Showing songs from Firebase
+	$scope.songs = $firebaseArray(ref);
 
 }]);
