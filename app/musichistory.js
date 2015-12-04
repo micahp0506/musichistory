@@ -10,7 +10,11 @@ app.config(['$routeProvider',
       }).
       when('/songs/new', {
         templateUrl: 'partials/song-form.html',
-        controller: 'SongFormCtrl'
+        controller: 'songFormCtrl'
+      }).
+      when('/songs/:songId', {
+        templateUrl: 'partials/song-detail.html',
+        controller: 'SongDetailCtrl'
       }).
       otherwise('/songs/list')
   }]);

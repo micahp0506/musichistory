@@ -3,7 +3,7 @@
 <div id="main-content" class="fade-main"> 
 	<div id="song-display">
 	  <div class="song" ng-repeat="song in songs"	 >
-	    <p>{{song.title}} by {{song.artist}} on the album {{song.album}}   <button class='delete' text='Delete'>X</button></p>
+	    <a id="ind-songs" href="#/songs/{{ song.$id }}"><p>{{song.title}} by {{song.artist}} on the album {{song.album}}</a>  <button class='delete' ng-click="deleteSong(song)" text='Delete'>X</button></p>
 	  </div>
 	</div>
 </div>

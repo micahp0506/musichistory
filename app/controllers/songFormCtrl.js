@@ -1,4 +1,4 @@
-app.controller("SongFormCtrl", ["$scope", "$firebaseArray",  
+app.controller("songFormCtrl", ["$scope", "$firebaseArray",  
     function($scope, $firebaseArray) {
 
       // Firebase reference
@@ -14,6 +14,8 @@ app.controller("SongFormCtrl", ["$scope", "$firebaseArray",
           album: $scope.newSong.album
         });
       };
+
+
     }
   ]
 );

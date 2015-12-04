@@ -132,4 +132,8 @@ img {
 .show {
   display: none; }
 
+#ind-songs {
+  text-decoration: none;
+  color: black; }
+
 /*# sourceMappingURL=main.css.map */
