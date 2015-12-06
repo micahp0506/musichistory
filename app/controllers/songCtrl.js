@@ -1,4 +1,4 @@
-app.controller("MusicHistoryCtrl", ["$scope", "$firebaseArray", 
+app.controller("MusicHistoryCtrl", ["$scope", "$firebaseArray",
 	function($scope, $firebaseArray) {
 
 	// Firebase reference

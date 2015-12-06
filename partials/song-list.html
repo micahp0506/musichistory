@@ -2,9 +2,50 @@
 <!-- Main Content Div -->
 <div id="main-content" class="fade-main"> 
 	<div id="song-display">
-	  <div class="song" ng-repeat="song in songs"	 >
+	  <div class="song" ng-repeat="song in songs | filterBy: "	 >
 	    <a id="ind-songs" href="#/songs/{{ song.$id }}"><p>{{song.title}} by {{song.artist}} on the album {{song.album}}</a>  <button class='delete' ng-click="deleteSong(song)" text='Delete'>X</button></p>
 	  </div>
 	</div>
 </div>
- 
+<!-- Music Adder Div with bootstrap -->
+  <div class="container-fluid" id="music-adder">
+    <div class="row">
+      <div class="col-md-9">
+        <!-- Artist -->
+        <select
+          ng-model="artist"
+          ng-options="song.artist for song in songs | unique: 'artist'">
+        </select>
+        <!-- Album -->
+        <p>Album:</p>
+        <select
+          ng-model="album"
+          ng-options="song.album for song in songs | unique: 'album'"> 
+        </select>
+        <p>Genre:</p>
+        <div id="music1">
+          <ul id="options1">
+            <li><input type="checkbox" name="genre" value="rock"> Rock</li>
+            <li><input type="checkbox" name="genre" value="pop"> Pop</li>
+            <li><input type="checkbox" name="genre" value="blues"> Blues</li>
+          </ul>
+         </div>
+        <div id="music2">  
+          <ul id="options2">
+            <li><input type="checkbox" name="genre" value="country"> Country</li>
+            <li><input type="checkbox" name="genre" value="jazz"> Jazz</li>
+            <li><input type="checkbox" name="genre" value="hip-hop"> Hip hop</li>
+          </ul>
+        </div>
+      </div>
+        <!-- Song Length -->
+      <div class="col-md-3">
+        <label class="song-length">Song length:</label>
+        <input type ="range" name="song-length" step="0" min="20" max="30">
+      </div>
+    </div>  
+  </div>      
+<!-- Button -->
+<div id="button">
+  <input type="submit" id="submit" value="Filter"></input>
+</div> 
